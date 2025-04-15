@@ -45,4 +45,6 @@
     <dimen name="calm_mode_left">0px</dimen>
     <dimen name="calm_mode_top">0px</dimen>
     <dimen name="calm_mode_height">1836px</dimen>
+
+    <dimen name="safe_bounds_open_top">600px</dimen>
 </resources>
