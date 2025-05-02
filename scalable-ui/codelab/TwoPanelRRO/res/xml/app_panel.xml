@@ -29,7 +29,6 @@
 
     <Transitions>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=panel_app_grid" toVariant="@id/closed"/>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=panel_calm_mode" toVariant="@id/closed"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
     </Transitions>

@@ -13,13 +13,14 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanel.codelab">
-    <application android:hasCode="false" />
-    <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
-    <overlay
-        android:targetPackage="com.android.systemui"
-        android:isStatic="true"
-        android:priority="110" />
-</manifest>
+<Controller id="grip_bar_controller">
+    <Config key="ControllerName" value="com.android.systemui.car.wm.scalableui.view.GripBarViewController"/>
+    <Config key="View" value="com.android.systemui.car.wm.scalableui.view.GripBar"/>
+    <Config key="EventId" value="_User_DragEvent_switch" />
+    <Config key="Orientation" value="0" />
+    <Config key="SnapThreadhold" value="5"/>
+    <BreakPoints>
+        <BreakPoint point="@dimen/top_breakpoint_switch" eventId="_Drag_TaskSwitchEvent_top" />
+        <BreakPoint point="@dimen/bottom_breakpoint_switch" eventId="_Drag_TaskSwitchEvent_bottom" />
+    </BreakPoints>
+</Controller>
