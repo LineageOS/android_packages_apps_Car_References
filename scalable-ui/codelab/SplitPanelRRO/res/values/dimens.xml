@@ -29,7 +29,12 @@
     <dimen name="map_bottom">@dimen/bottom_bar_top</dimen>
     <dimen name="map_height">1479px</dimen>
 
-    <dimen name="split_bottom">1020px</dimen>
+    <dimen name="split_bottom">1000px</dimen>
+
+    <dimen name="grip_bar_split_task_left">300px</dimen>
+    <dimen name="grip_bar_split_task_top">1010px</dimen>
+    <dimen name="grip_bar_split_task_right">700px</dimen>
+    <dimen name="grip_bar_split_task_bottom">1025px</dimen>
 
     <dimen name="corner_radius">40dp</dimen>
     <dimen name="drag_corner_radius">80dp</dimen>
@@ -38,9 +43,11 @@
     <dimen name="app_immersive_height">1712px</dimen>
     <dimen name="app_height">749px</dimen>
 
-    <dimen name="top_breakpoint">350px</dimen>
-    <dimen name="bottom_breakpoint">1400px</dimen>
+    <dimen name="top_breakpoint_switch">350px</dimen>
+    <dimen name="bottom_breakpoint_switch">1400px</dimen>
 
+    <dimen name="top_breakpoint_split">400px</dimen>
+    <dimen name="bottom_breakpoint_split">1500px</dimen>
 
     <dimen name="lower_grip_bar_switch_task_left">20px</dimen>
     <dimen name="lower_grip_bar_switch_task_top">1350px</dimen>
@@ -51,5 +58,9 @@
     <dimen name="upper_grip_bar_switch_task_top">420px</dimen>
     <dimen name="upper_grip_bar_switch_task_right">40px</dimen>
     <dimen name="upper_grip_bar_switch_task_bottom">520px</dimen>
+
+    <dimen name="safe_bounds_open_top">1100px</dimen>
+    <dimen name="safe_bounds_close_top">2156px</dimen>
+    <dimen name="safe_bounds_close_bottom">2837px</dimen>
 
 </resources>

@@ -20,7 +20,7 @@
     </Variant>
     <Variant id="@+id/bottom_opened" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" top="@dimen/split_bottom" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
@@ -29,24 +29,31 @@
     <Variant id="@+id/drag_top_opened" parent="@id/base">
         <Visibility isVisible="true"/>
         <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
-        <SurfaceBounds left="0" top="@dimen/map_top" width="100%" height="@dimen/app_grid_drawer_height" />
     </Variant>
     <Variant id="@+id/top_opened" parent="@id/base">
         <Visibility isVisible="true"/>
         <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/split_bottom" />
     </Variant>
 
+    <Variant id="@+id/drag_frame_0" parent="@id/base">
+        <Bounds left="0" right="1080" top="80" bottom="860" />
+    </Variant>
+    <Variant id="@+id/drag_frame_100" parent="@id/base">
+        <Bounds left="0" right="1080" top="1000" bottom="1780" />
+    </Variant>
+
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
-        <KeyFrame frame="0" variant="@id/drag_top_opened" />
-        <KeyFrame frame="100" variant="@id/bottom_opened" />
+        <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="100" variant="@id/drag_frame_100" />
     </KeyFrameVariant>
 
     <Transitions>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=paintbooth_panel" toVariant="@id/bottom_opened"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=themeplayground_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
-        <Transition onEvent="_User_DragEvent_split"  toVariant="@id/drag"/>
+        <Transition onEvent="_User_DragEvent_switch"  toVariant="@id/drag"/>
         <Transition onEvent="_Drag_TaskSwitchEvent_top" toVariant="@id/top_opened"/>
         <Transition onEvent="_Drag_TaskSwitchEvent_bottom"  toVariant="@id/bottom_opened"/>
     </Transitions>

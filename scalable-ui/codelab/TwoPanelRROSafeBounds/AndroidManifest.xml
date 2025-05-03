@@ -15,11 +15,11 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanel.codelab">
+    package="com.android.systemui.rro.scalableUI.twoPanelSafeBounds.codelab">
     <application android:hasCode="false" />
     <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
     <overlay
         android:targetPackage="com.android.systemui"
         android:isStatic="true"
-        android:priority="110" />
+        android:priority="111" />
 </manifest>

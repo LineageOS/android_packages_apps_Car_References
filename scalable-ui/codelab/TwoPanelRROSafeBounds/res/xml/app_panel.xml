@@ -18,16 +18,27 @@
         <Layer layer="@integer/app_panel_layer"/>
         <Visibility isVisible="true"/>
         <Alpha alpha="1.0" />
-        <Bounds left="0" top="0" width="100%" height="100%" />
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
+        <SafeBounds
+            bottom="@dimen/bottom_bar_top"
+            left="0"
+            top="@dimen/safe_bounds_open_top"
+            width="100%" />
     </Variant>
     <Variant id="@+id/closed">
         <Layer layer="@integer/app_panel_layer"/>
         <Alpha alpha="0.0" />
         <Visibility isVisible="false"/>
-        <Bounds left="0" top="@dimen/screen_height" width="100%" height="100%" />
+        <Bounds left="0" top="@dimen/screen_height" width="100%" height="@dimen/app_height" />
+        <SafeBounds
+            bottom="@dimen/safe_bounds_close_bottom"
+            left="0"
+            top="@dimen/safe_bounds_close_top"
+            width="100%" />
     </Variant>
 
     <Transitions>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=panel_app_grid" toVariant="@id/closed"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
     </Transitions>

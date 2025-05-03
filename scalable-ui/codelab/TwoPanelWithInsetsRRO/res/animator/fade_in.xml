@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2025 The Android Open Source Project
   ~
@@ -13,13 +14,8 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanel.codelab">
-    <application android:hasCode="false" />
-    <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
-    <overlay
-        android:targetPackage="com.android.systemui"
-        android:isStatic="true"
-        android:priority="110" />
-</manifest>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:propertyName="alpha"
+    android:duration="300"
+    android:valueTo="1"
+    android:valueType="floatType" />

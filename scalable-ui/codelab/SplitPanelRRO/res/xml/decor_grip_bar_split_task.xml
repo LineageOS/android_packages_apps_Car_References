@@ -1,0 +1,64 @@
+<!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!-- TODO(b/409116725): migrate role to design compose friendly config. -->
+<Panel id="decor_grip_bar_split_task" defaultVariant="@id/closed" role="@string/decor_split_grip_bar_provider" controller="@xml/drag_split_task_grip_controller">
+    <Variant id="@+id/base">
+        <Layer layer="@integer/grip_bar_paintbooth_panel_layer"/>
+        <Visibility isVisible="true"/>
+        <Corner radius="@dimen/drag_corner_radius"/>
+    </Variant>
+
+    <Variant id="@+id/opened" parent="@id/base">
+        <Bounds left="@dimen/grip_bar_split_task_left" right="@dimen/grip_bar_split_task_right" top="@dimen/grip_bar_split_task_top" bottom="@dimen/grip_bar_split_task_bottom" />
+    </Variant>
+
+    <Variant id="@+id/closed" parent="@id/base">
+        <Visibility isVisible="false"/>
+        <Bounds left="@dimen/grip_bar_split_task_left" top="@dimen/bottom_bar_bottom" right="@dimen/grip_bar_split_task_right" height="100%" />
+    </Variant>
+
+    <Variant id="@+id/drag_frame_0" parent="@id/base">
+        <Bounds left="300" top="400" right="700" bottom="415" />
+    </Variant>
+    <Variant id="@+id/drag_frame_50" parent="@id/base">
+        <Bounds left="300" top="950" right="700" bottom="965" />
+    </Variant>
+    <Variant id="@+id/drag_frame_100" parent="@id/base">
+        <Bounds left="300" top="1500" right="700" bottom="1515" />
+    </Variant>
+
+    <KeyFrameVariant id="@+id/drag" parent="@id/base">
+        <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="100" variant="@id/drag_frame_100" />
+    </KeyFrameVariant>
+
+    <Transitions>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/closed"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=paintbooth_panel" toVariant="@id/closed"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=themeplayground_panel" toVariant="@id/opened"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/closed"/>
+        <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
+        <Transition onEvent="_System_EnterSuwEvent" toVariant="@id/closed"/>
+        <Transition onEvent="_System_ExitSuwEvent" toVariant="@id/closed"/>
+        <Transition onEvent="close_app_grid" toVariant="@id/closed"/>
+        <Transition onEvent="_User_DragEvent_split"  toVariant="@id/drag"/>
+
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/drag_frame_0"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/drag_frame_50"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/drag_frame_100"/>
+    </Transitions>
+</Panel>

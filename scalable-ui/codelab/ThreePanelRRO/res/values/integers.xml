@@ -19,5 +19,7 @@
     <integer name="assistant_panel_layer">200</integer>
     <integer name="app_panel_layer">50</integer>
     <integer name="app_grid_panel_layer">100</integer>
+    <integer name="paintbooth_panel_layer">100</integer>
+    <integer name="grip_bar_paintbooth_panel_layer">101</integer>
     <integer name="map_panel_layer">2</integer>
 </resources>
