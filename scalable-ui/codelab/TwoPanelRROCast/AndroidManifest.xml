@@ -15,7 +15,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanelSafeBounds.codelab">
+    package="com.android.systemui.rro.scalableUI.twoPanelCast.codelab">
     <application android:hasCode="false" />
     <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
     <overlay
