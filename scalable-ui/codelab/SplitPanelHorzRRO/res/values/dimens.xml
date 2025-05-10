@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource,PxUsage">
+    <dimen name="screen_width">2048px</dimen>
+    <dimen name="screen_height">1080px</dimen>
+
+    <dimen name="top_bar_bottom">67px</dimen>
+
+    <dimen name="bottom_bar_top">940px</dimen>
+    <dimen name="bottom_bar_bottom">1080px</dimen>
+
+    <dimen name="app_grid_drawer_width">749px</dimen>
+
+    <dimen name="map_top">@dimen/top_bar_bottom</dimen>
+    <dimen name="map_left">1033px</dimen>
+    <dimen name="map_bottom">@dimen/bottom_bar_top</dimen>
+    <dimen name="map_right">2048px</dimen>
+
+    <dimen name="split_center">1000px</dimen>
+
+    <dimen name="grip_bar_split_task_left">1019px</dimen>
+    <dimen name="grip_bar_split_task_top">300px</dimen>
+    <dimen name="grip_bar_split_task_right">1029px</dimen>
+    <dimen name="grip_bar_split_task_bottom">700px</dimen>
+
+    <dimen name="corner_radius">40dp</dimen>
+    <dimen name="drag_corner_radius">80dp</dimen>
+
+    <dimen name="app_right">1015px</dimen>
+
+    <dimen name="top_breakpoint_switch">350px</dimen>
+    <dimen name="bottom_breakpoint_switch">1400px</dimen>
+
+    <dimen name="top_breakpoint_split">400px</dimen>
+    <dimen name="bottom_breakpoint_split">1500px</dimen>
+
+    <dimen name="safe_bounds_open_top">1100px</dimen>
+    <dimen name="safe_bounds_close_top">2156px</dimen>
+    <dimen name="safe_bounds_close_bottom">2837px</dimen>
+
+    <dimen name="lower_grip_bar_switch_task_left">1350px</dimen>
+    <dimen name="lower_grip_bar_switch_task_top">300px</dimen>
+    <dimen name="lower_grip_bar_switch_task_right">1450px</dimen>
+    <dimen name="lower_grip_bar_switch_task_bottom">400px</dimen>
+
+    <dimen name="upper_grip_bar_switch_task_left">20px</dimen>
+    <dimen name="upper_grip_bar_switch_task_top">420px</dimen>
+    <dimen name="upper_grip_bar_switch_task_right">40px</dimen>
+    <dimen name="upper_grip_bar_switch_task_bottom">520px</dimen>
+</resources>
