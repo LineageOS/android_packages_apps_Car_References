@@ -1,0 +1,55 @@
+<!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<Panel id="decor_split_nav_overlay" defaultVariant="@id/closed" role="@string/decor_split_nav_overlay_panel_provider" controller="@xml/decor_split_nav_overlay_controller">
+    <Variant id="@+id/base">
+        <Layer layer="@integer/decor_vail_overlay_panel_layer"/>
+        <Visibility isVisible="true"/>
+        <Corner radius="@dimen/drag_corner_radius"/>
+    </Variant>
+
+    <Variant id="@+id/closed" parent="@id/base">
+        <Visibility isVisible="false"/>
+        <Bounds left="10" top="@dimen/bottom_bar_bottom" width="20" height="100" />
+    </Variant>
+
+    <Variant id="@+id/drag_frame_0" parent="@id/base">
+        <Bounds left="0"  bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="2048" />
+    </Variant>
+
+    <Variant id="@+id/drag_frame_100" parent="@id/base">
+        <Bounds left="2048"  bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="2048" />
+    </Variant>
+
+    <KeyFrameVariant id="@+id/drag" parent="@id/base">
+        <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="100" variant="@id/drag_frame_100" />
+    </KeyFrameVariant>
+
+    <Transitions>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/closed"/>
+        <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
+        <Transition onEvent="_System_EnterSuwEvent" toVariant="@id/closed"/>
+        <Transition onEvent="_System_ExitSuwEvent" toVariant="@id/closed"/>
+        <Transition onEvent="close_app_grid" toVariant="@id/closed"/>
+        <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/drag"/>
+        <Transition onEvent="_User_DragEvent_split_increase" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/closed"/>
+    </Transitions>
+
+</Panel>
