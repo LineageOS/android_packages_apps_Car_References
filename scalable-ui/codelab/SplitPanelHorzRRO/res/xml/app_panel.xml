@@ -68,9 +68,9 @@
     <Transitions>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/left_opened"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/left_opened"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/opened_full"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/left_opened" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/opened_full" duration="1"/>
         <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/drag"/>
     </Transitions>
 </Panel>

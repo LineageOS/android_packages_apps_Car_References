@@ -16,6 +16,7 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource,PxUsage">
     <dimen name="screen_height">2048px</dimen>
+    <dimen name="screen_width">1080px</dimen>
 
     <dimen name="top_bar_bottom">80px</dimen>
 
@@ -31,10 +32,20 @@
 
     <dimen name="split_bottom">1000px</dimen>
 
-    <dimen name="grip_bar_split_task_left">300px</dimen>
-    <dimen name="grip_bar_split_task_top">1010px</dimen>
-    <dimen name="grip_bar_split_task_right">700px</dimen>
-    <dimen name="grip_bar_split_task_bottom">1025px</dimen>
+    <dimen name="grip_bar_split_task_left_p0">300px</dimen>
+    <dimen name="grip_bar_split_task_top_p0">400px</dimen>
+    <dimen name="grip_bar_split_task_right_p0">700px</dimen>
+    <dimen name="grip_bar_split_task_bottom_p0">415px</dimen>
+
+    <dimen name="grip_bar_split_task_left_p1">300px</dimen>
+    <dimen name="grip_bar_split_task_top_p1">950px</dimen>
+    <dimen name="grip_bar_split_task_right_p1">700px</dimen>
+    <dimen name="grip_bar_split_task_bottom_p1">965px</dimen>
+
+    <dimen name="grip_bar_split_task_left_p2">300px</dimen>
+    <dimen name="grip_bar_split_task_top_p2">1500px</dimen>
+    <dimen name="grip_bar_split_task_right_p2">700px</dimen>
+    <dimen name="grip_bar_split_task_bottom_p2">1515px</dimen>
 
     <dimen name="corner_radius">40dp</dimen>
     <dimen name="drag_corner_radius">80dp</dimen>
@@ -42,6 +53,7 @@
     <dimen name="app_immersive_top">@dimen/top_bar_bottom</dimen>
     <dimen name="app_immersive_height">1712px</dimen>
     <dimen name="app_height">749px</dimen>
+    <dimen name="app_right">1064px</dimen>
 
     <dimen name="top_breakpoint_switch">350px</dimen>
     <dimen name="bottom_breakpoint_switch">1400px</dimen>

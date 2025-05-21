@@ -23,7 +23,7 @@
     <Config key="SnapThreadhold" value="5"/>
     <BreakPoints>
         <BreakPoint point="400" eventId="_Drag_TaskSplitEvent_f0" />
-        <BreakPoint point="950" eventId="_Drag_TaskSplitEvent_f50" />
-        <BreakPoint point="1500" eventId="_Drag_TaskSplitEvent_f100" />
+        <BreakPoint point="1200" eventId="_Drag_TaskSplitEvent_f50" />
+        <BreakPoint point="1750" eventId="_Drag_TaskSplitEvent_f100" />
     </BreakPoints>
 </Controller>

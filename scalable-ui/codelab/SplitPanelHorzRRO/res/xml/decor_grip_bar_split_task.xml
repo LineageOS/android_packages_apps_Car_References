@@ -22,13 +22,13 @@
     </Variant>
 
     <Variant id="@+id/opened_left" parent="@id/base">
-        <Bounds top="300" left="0" bottom="700" right="25" />
+        <Bounds top="300" left="0" bottom="700" right="35" />
     </Variant>
     <Variant id="@+id/opened_center" parent="@id/base">
-        <Bounds top="300" left="1019" bottom="700" right="1029" />
+        <Bounds top="300" left="1015" bottom="700" right="1035" />
     </Variant>
     <Variant id="@+id/opened_right" parent="@id/base">
-        <Bounds top="300" left="2023" bottom="700" right="2048" />
+        <Bounds top="300" left="2028" bottom="700" right="2048" />
     </Variant>
 
     <Variant id="@+id/closed" parent="@id/base">
@@ -41,7 +41,7 @@
     </Variant>
 
     <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds top="300" left="2023" bottom="700" right="2048" />
+        <Bounds top="300" left="1890" bottom="700" right="2048" />
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">

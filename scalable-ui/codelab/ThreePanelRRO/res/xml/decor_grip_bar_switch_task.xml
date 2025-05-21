@@ -18,8 +18,6 @@
 <Panel id="decor_grip_bar_switch_task" defaultVariant="@id/closed" role="@string/task_switch_grid_bar_provider" controller="@xml/drag_switch_task_grip_controller">
     <Variant id="@+id/base">
         <Layer layer="@integer/grip_bar_paintbooth_panel_layer"/>
-<!--        <Visibility isVisible="true"/>-->
-<!--        <Alpha alpha="1.0" />-->
         <Corner radius="@dimen/drag_corner_radius"/>
     </Variant>
 
@@ -28,9 +26,7 @@
     </Variant>
     <Variant id="@+id/opened_top" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="@dimen/lower_grip_bar_switch_task_left" right="@dimen/lower_grip_bar_switch_task_right" top="@dimen/lower_grip_bar_switch_task_top" bottom="@dimen/lower_grip_bar_switch_task_bottom" />
-        <SurfaceBounds left="@dimen/upper_grip_bar_switch_task_left" right="@dimen/upper_grip_bar_switch_task_right" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />
-<!--        <SurfaceBounds left="@dimen/lower_grip_bar_switch_task_left" right="@dimen/lower_grip_bar_switch_task_right" top="@dimen/lower_grip_bar_switch_task_top" bottom="@dimen/lower_grip_bar_switch_task_bottom" />-->
+        <Bounds left="@dimen/upper_grip_bar_switch_task_left" right="@dimen/upper_grip_bar_switch_task_right" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
@@ -40,7 +36,6 @@
     <Variant id="@+id/drag_switch" parent="@id/base">
         <Visibility isVisible="true"/>
         <Bounds left="@dimen/upper_grip_bar_switch_task_left" right="@dimen/upper_grip_bar_switch_task_right" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />
-<!--        <SurfaceBounds left="@dimen/upper_grip_bar_switch_task_left" right="@dimen/upper_grip_bar_switch_task_right" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />-->
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">

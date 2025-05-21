@@ -15,5 +15,5 @@
   ~ limitations under the License
   -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <color name="blur_background_color">#46000000</color>
+    <color name="overlay_panel_bg_color">#46000000</color>
 </resources>
