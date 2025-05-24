@@ -28,6 +28,15 @@
             top="@dimen/top_bar_bottom"
             right="@dimen/app_right" />
     </Variant>
+    <Variant id="@+id/opened_full" parent="@id/base">
+        <Visibility isVisible="true"/>
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="100%" />
+        <SafeBounds
+            bottom="@dimen/bottom_bar_top"
+            left="70"
+            top="@dimen/top_bar_bottom"
+            right="@dimen/app_right" />
+    </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
         <Bounds right="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="@dimen/app_right" height="@dimen/app_grid_drawer_width" />
@@ -37,48 +46,31 @@
             top="@dimen/top_bar_bottom"
             right="0" />
     </Variant>
-    <Variant id="@+id/drag_left_opened" parent="@id/base">
-        <Visibility isVisible="true"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="@dimen/app_right" />
-        <SurfaceBounds right="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="@dimen/app_right" height="@dimen/app_grid_drawer_width" />
-    </Variant>
-
 
     <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds left="0" top="@dimen/top_bar_bottom" right="515" bottom="@dimen/bottom_bar_top"/>
-        <SafeBounds
-            bottom="@dimen/bottom_bar_top"
-            left="40"
-            top="@dimen/top_bar_bottom"
-            right="515" />
+        <Bounds bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="0" left="-1015"/>
     </Variant>
+
     <Variant id="@+id/drag_frame_50" parent="@id/base">
-        <Bounds left="0" top="@dimen/top_bar_bottom" right="1015" bottom="@dimen/bottom_bar_top" />
-        <SafeBounds
-            bottom="@dimen/bottom_bar_top"
-            left="70"
-            top="@dimen/top_bar_bottom"
-            right="1015" />
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="50%"/>
     </Variant>
+
     <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="0" top="@dimen/top_bar_bottom" right="1515" bottom="@dimen/bottom_bar_top"/>
-        <SafeBounds
-            bottom="@dimen/bottom_bar_top"
-            left="90"
-            top="@dimen/top_bar_bottom"
-            right="1015" />
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="2048" />
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
-        <KeyFrame frame="0" variant="@id/drag_left_opened" />
-        <KeyFrame frame="100" variant="@id/left_opened" />
+        <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="50" variant="@id/drag_frame_50" />
+        <KeyFrame frame="100" variant="@id/drag_frame_100" />
     </KeyFrameVariant>
 
     <Transitions>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/left_opened"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/drag_frame_0"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/drag_frame_50"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/drag_frame_100"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/left_opened"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/opened_full"/>
+        <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/drag"/>
     </Transitions>
 </Panel>

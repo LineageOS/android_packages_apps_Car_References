@@ -23,10 +23,9 @@
     <array name="window_states">
         <item>@xml/app_panel</item>
         <item>@xml/map_panel</item>
-        <item>@xml/kitchen_sink_panel</item>
-        <item>@xml/paintbooth_panel</item>
-        <item>@xml/decor_grip_bar_switch_task</item>
+        <item>@xml/decor_grip_bar_split_task</item>
         <item>@xml/decor_split_nav_overlay</item>
+        <item>@xml/decor_split_app_overlay</item>
     </array>
 
     <string-array name="config_default_activities" translatable="false">
