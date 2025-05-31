@@ -46,9 +46,9 @@
         <Transition onEvent="close_app_grid" toVariant="@id/closed"/>
         <Transition onEvent="_User_DragEvent_split_increase" toVariant="@id/drag"/>
         <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/closed" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/closed" duration="1"/>
     </Transitions>
 
 </Panel>

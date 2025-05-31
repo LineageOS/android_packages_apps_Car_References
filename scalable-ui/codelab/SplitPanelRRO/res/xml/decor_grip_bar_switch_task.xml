@@ -30,7 +30,7 @@
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
-        <Bounds left="10" top="@dimen/bottom_bar_bottom" width="20" height="100" />
+        <Bounds left="10" top="@dimen/bottom_bar_bottom" width="20" height="300" />
     </Variant>
 
     <Variant id="@+id/drag_switch" parent="@id/base">
@@ -39,10 +39,10 @@
     </Variant>
 
     <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds left="20" right="40" top="420" bottom="520" />
+        <Bounds left="@dimen/upper_grip_bar_switch_task_left" right="100" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />
     </Variant>
     <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="20" right="40" top="1350" bottom="1450" />
+        <Bounds left="@dimen/lower_grip_bar_switch_task_left" right="100" top="@dimen/lower_grip_bar_switch_task_top" bottom="@dimen/lower_grip_bar_switch_task_bottom" />
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">

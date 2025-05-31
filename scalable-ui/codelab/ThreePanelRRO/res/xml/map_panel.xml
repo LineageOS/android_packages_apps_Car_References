@@ -37,7 +37,6 @@
     <Variant id="@+id/opened_blur" parent="@id/map_base">
         <Visibility isVisible="true"/>
         <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/map_bottom" />
-        <Blur cornerRadius="16.0" blurRadius="20" backgroundColor="@color/blur_background_color" vailEnabled="true" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/map_base">
         <Visibility isVisible="false"/>

@@ -23,22 +23,22 @@
     </Variant>
 
     <Variant id="@+id/opened" parent="@id/base">
-        <Bounds left="@dimen/grip_bar_split_task_left" right="@dimen/grip_bar_split_task_right" top="@dimen/grip_bar_split_task_top" bottom="@dimen/grip_bar_split_task_bottom" />
+        <Bounds left="@dimen/grip_bar_split_task_left_p1" right="@dimen/grip_bar_split_task_right_p1" top="@dimen/grip_bar_split_task_top_p1" bottom="@dimen/grip_bar_split_task_bottom_p1" />
     </Variant>
 
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
-        <Bounds left="@dimen/grip_bar_split_task_left" top="@dimen/bottom_bar_bottom" right="@dimen/grip_bar_split_task_right" height="100%" />
+        <Bounds left="@dimen/grip_bar_split_task_left_p1" right="@dimen/grip_bar_split_task_right_p1" top="@dimen/grip_bar_split_task_top_p1" bottom="@dimen/grip_bar_split_task_bottom_p1" />
     </Variant>
 
     <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds left="300" top="400" right="700" bottom="415" />
+        <Bounds left="@dimen/grip_bar_split_task_left_p0" right="@dimen/grip_bar_split_task_right_p0" top="@dimen/grip_bar_split_task_top_p0" bottom="@dimen/grip_bar_split_task_bottom_p0" />
     </Variant>
     <Variant id="@+id/drag_frame_50" parent="@id/base">
-        <Bounds left="300" top="950" right="700" bottom="965" />
+        <Bounds left="@dimen/grip_bar_split_task_left_p1" right="@dimen/grip_bar_split_task_right_p1" top="@dimen/grip_bar_split_task_top_p1" bottom="@dimen/grip_bar_split_task_bottom_p1" />
     </Variant>
     <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="300" top="1500" right="700" bottom="1515" />
+        <Bounds left="@dimen/grip_bar_split_task_left_p2" right="@dimen/grip_bar_split_task_right_p2" top="@dimen/grip_bar_split_task_top_p2" bottom="@dimen/grip_bar_split_task_bottom_p2" />
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">

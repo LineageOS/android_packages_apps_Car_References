@@ -18,35 +18,20 @@
 <Panel id="decor_split_nav_overlay" defaultVariant="@id/closed" role="@string/decor_split_nav_overlay_panel_provider" controller="@xml/decor_split_nav_overlay_controller">
     <Variant id="@+id/base">
         <Layer layer="@integer/decor_vail_overlay_panel_layer"/>
-        <Visibility isVisible="true"/>
-        <!--        <Alpha alpha="1.0" />-->
         <Corner radius="@dimen/drag_corner_radius"/>
     </Variant>
 
-    <Variant id="@+id/opened_bottom" parent="@id/base">
-        <Bounds left="@dimen/lower_grip_bar_switch_task_left" right="@dimen/lower_grip_bar_switch_task_right" top="@dimen/lower_grip_bar_switch_task_top" bottom="@dimen/lower_grip_bar_switch_task_bottom" />
-    </Variant>
-    <Variant id="@+id/opened_top" parent="@id/base">
-        <Visibility isVisible="true"/>
-        <Bounds left="@dimen/lower_grip_bar_switch_task_left" right="@dimen/lower_grip_bar_switch_task_right" top="@dimen/lower_grip_bar_switch_task_top" bottom="@dimen/lower_grip_bar_switch_task_bottom" />
-        <SurfaceBounds left="@dimen/upper_grip_bar_switch_task_left" right="@dimen/upper_grip_bar_switch_task_right" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />
-    </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
-        <Bounds left="10" top="@dimen/bottom_bar_bottom" width="20" height="100" />
-    </Variant>
-
-    <Variant id="@+id/drag_switch" parent="@id/base">
-        <Visibility isVisible="true"/>
-        <Bounds left="@dimen/upper_grip_bar_switch_task_left" right="@dimen/upper_grip_bar_switch_task_right" top="@dimen/upper_grip_bar_switch_task_top" bottom="@dimen/upper_grip_bar_switch_task_bottom" />
+        <Bounds left="0" top="@dimen/bottom_bar_top" width="20" height="100" />
     </Variant>
 
     <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds left="0" top="80" right="1080" bottom="400" />
+        <Bounds left="0" top="80" right="@dimen/screen_width" bottom="@dimen/grip_bar_split_task_top_p0" />
     </Variant>
 
     <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="0" top="80" right="1080" bottom="1500" />
+        <Bounds left="0" top="80" right="@dimen/screen_width" bottom="@dimen/grip_bar_split_task_top_p2" />
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
@@ -65,9 +50,9 @@
         <Transition onEvent="close_app_grid" toVariant="@id/closed"/>
         <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/closed"/>
         <Transition onEvent="_User_DragEvent_split_increase" toVariant="@id/drag"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/closed" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/closed" duration="1"/>
     </Transitions>
 
 </Panel>
