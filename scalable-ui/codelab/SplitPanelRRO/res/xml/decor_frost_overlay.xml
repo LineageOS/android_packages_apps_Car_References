@@ -13,15 +13,15 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<Panel id="decor_split_nav_overlay" defaultVariant="@id/closed" role="@string/decor_split_nav_overlay_panel_provider" controller="@xml/decor_split_nav_overlay_controller">
+<Panel id="decor_frost_overlay" defaultVariant="@id/closed" role="@string/decor_frost_overlay_provider" controller="@xml/decor_frost_overlay_controller">
     <Variant id="@+id/map_base">
-        <Layer layer="@integer/decor_overlay_panel_layer"/>
+        <Layer layer="@integer/frost_overlay_layer"/>
         <Corner radius="@dimen/corner_radius"/>
     </Variant>
-    <Variant id="@+id/opened_blur" parent="@id/map_base">
+    <Variant id="@+id/opened_frost" parent="@id/map_base">
         <Visibility isVisible="true"/>
         <Alpha alpha="1.0" />
-        <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/map_bottom" />
+        <Bounds left="0" top="@dimen/map_top" right="@dimen/screen_width" bottom="@dimen/map_bottom" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/map_base">
         <Visibility isVisible="false"/>
@@ -29,11 +29,11 @@
         <Bounds left="0" top="@dimen/map_top" width="100%" height="100%" />
     </Variant>
 
-    <Transitions defaultInterpolator="@android:anim/bounce_interpolator" defaultDuration="700">
+    <Transitions>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=paintbooth_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/closed"/>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/opened_blur"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=map_panel" toVariant="@id/closed"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/opened_frost"/>
         <Transition onEvent="_Drag_TaskSwitchEvent_top" toVariant="@id/closed"/>
         <Transition onEvent="_Drag_TaskSwitchEvent_bottom" toVariant="@id/closed"/>
     </Transitions>

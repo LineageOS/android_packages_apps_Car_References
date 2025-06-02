@@ -21,7 +21,7 @@
         <Layer layer="@integer/app_grid_panel_layer"/>
         <Visibility isVisible="true"/>
         <Corner radius="@dimen/corner_radius"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
+        <Bounds left="16" bottom="@dimen/bottom_bar_top" right="1584" height="@dimen/app_height" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Layer layer="@integer/app_grid_panel_layer"/>

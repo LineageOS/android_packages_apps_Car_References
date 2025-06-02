@@ -13,7 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<Controller id="decor_split_theme_overlay_controller">
+<Controller id="decor_split_app_overlay_controller">
     <Config key="ControllerName" value="com.android.systemui.car.wm.scalableui.view.PanelOverlayController"/>
     <Config key="View" value="com.android.systemui.car.wm.scalableui.view.PanelOverlay"/>
     <Config key="overlayPanelId" value="app_panel" />

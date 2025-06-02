@@ -23,8 +23,8 @@
   <dimen name="bottom_bar_top">2410px</dimen>
   <dimen name="bottom_bar_bottom">2560px</dimen>
 
-  <dimen name="map_top">0px</dimen>
-  <dimen name="map_right">1600px</dimen>
+  <dimen name="map_top">@dimen/top_bar_bottom</dimen>
+  <dimen name="map_right">1584px</dimen>
 
   <dimen name="top_breakpoint_switch">400px</dimen>
   <dimen name="bottom_breakpoint_switch">1725px</dimen>
@@ -33,20 +33,20 @@
   <dimen name="app_right">1584px</dimen>
   <dimen name="split_bottom">1220px</dimen>
 
-  <dimen name="grip_bar_split_task_left_p0">600px</dimen>
-  <dimen name="grip_bar_split_task_top_p0">395px</dimen>
-  <dimen name="grip_bar_split_task_right_p0">1000px</dimen>
-  <dimen name="grip_bar_split_task_bottom_p0">425px</dimen>
+  <dimen name="grip_bar_split_task_left_p0">700px</dimen>
+  <dimen name="grip_bar_split_task_top_p0">400px</dimen>
+  <dimen name="grip_bar_split_task_right_p0">900px</dimen>
+  <dimen name="grip_bar_split_task_bottom_p0">440px</dimen>
 
-  <dimen name="grip_bar_split_task_left_p1">600px</dimen>
-  <dimen name="grip_bar_split_task_top_p1">1195px</dimen>
-  <dimen name="grip_bar_split_task_right_p1">1000px</dimen>
-  <dimen name="grip_bar_split_task_bottom_p1">1225px</dimen>
+  <dimen name="grip_bar_split_task_left_p1">700px</dimen>
+  <dimen name="grip_bar_split_task_top_p1">1050px</dimen>
+  <dimen name="grip_bar_split_task_right_p1">900px</dimen>
+  <dimen name="grip_bar_split_task_bottom_p1">1090px</dimen>
 
-  <dimen name="grip_bar_split_task_left_p2">600px</dimen>
-  <dimen name="grip_bar_split_task_top_p2">1695px</dimen>
-  <dimen name="grip_bar_split_task_right_p2">1000px</dimen>
-  <dimen name="grip_bar_split_task_bottom_p2">1725px</dimen>
+  <dimen name="grip_bar_split_task_left_p2">700px</dimen>
+  <dimen name="grip_bar_split_task_top_p2">1700px</dimen>
+  <dimen name="grip_bar_split_task_right_p2">900px</dimen>
+  <dimen name="grip_bar_split_task_bottom_p2">1740px</dimen>
 
   <dimen name="lower_grip_bar_switch_task_left">0px</dimen>
   <dimen name="lower_grip_bar_switch_task_top">1700px</dimen>

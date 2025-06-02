@@ -17,6 +17,7 @@
 
 <resources>
     <integer name="map_panel_layer">2</integer>
+    <integer name="frost_overlay_layer">40</integer>
     <integer name="app_panel_layer">50</integer>
     <integer name="app_grid_panel_layer">100</integer>
     <integer name="paintbooth_panel_layer">100</integer>

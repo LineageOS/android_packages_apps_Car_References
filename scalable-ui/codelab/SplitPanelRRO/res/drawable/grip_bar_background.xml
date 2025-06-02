@@ -15,14 +15,27 @@
   ~ limitations under the License.
   -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item >
-        <shape>
-            <solid android:color="#5F6368"/>
-            <corners android:topLeftRadius="16dp"
-                android:topRightRadius="16dp"
-                android:bottomLeftRadius="16dp"
-                android:bottomRightRadius="16dp"/>
-        </shape>
-    </item>
-</selector>
+<!--
+  The <inset> drawable is used to create margins around the inner shape.
+  This makes the drawable appear smaller than the View it's applied to,
+  with transparent space filling the inset area.
+-->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="0dp"
+    android:insetTop="16dp"
+    android:insetRight="0dp"
+    android:insetBottom="16dp">
+
+    <!-- This is the visible part of the drawable -->
+    <shape android:shape="rectangle">
+        <!-- The color of the grip bar -->
+        <solid android:color="#44464E"/>
+        <!--
+          The corner radius for the grip bar.
+          Using android:radius is a shorthand for setting all four corners
+          to the same value.
+        -->
+        <corners android:radius="16dp" />
+    </shape>
+
+</inset>

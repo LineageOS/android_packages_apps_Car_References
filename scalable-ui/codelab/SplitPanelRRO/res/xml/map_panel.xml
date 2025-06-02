@@ -20,42 +20,53 @@
     </Variant>
     <Variant id="@+id/opened" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/map_bottom" />
+        <Bounds left="0" top="@dimen/map_top" right="@dimen/screen_width" bottom="@dimen/map_bottom" />
     </Variant>
     <Variant id="@+id/opened_split" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/grip_bar_split_task_top_p1" />
+        <Bounds left="16" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/grip_bar_split_task_top_p1" />
+    </Variant>
+    <Variant id="@+id/opened_paintbooth_split" parent="@id/base">
+        <Visibility isVisible="true"/>
+        <Bounds left="16" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/split_bottom" />
     </Variant>
     <Variant id="@+id/opened_lower" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" top="@dimen/split_bottom" />
-    </Variant>
-    <Variant id="@+id/opened_blur" parent="@id/base">
-        <Visibility isVisible="true"/>
-        <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/map_bottom" />
+        <Bounds left="16" bottom="@dimen/bottom_bar_top" right="@dimen/map_right" top="@dimen/split_bottom" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
-        <Bounds left="0" top="@dimen/map_top" width="100%" height="100%" />
+        <Bounds left="16" top="@dimen/map_top" right="@dimen/map_right" height="100%" />
+    </Variant>
+    <Variant id="@+id/opened_overlap" parent="@id/base">
+        <Visibility isVisible="true"/>
+        <Bounds left="0" top="@dimen/map_top" right="@dimen/screen_width" bottom="@dimen/map_bottom" />
+        <Insets left="0" top="@dimen/map_top" right="0" bottom="1110" />
     </Variant>
 
     <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds left="0" top="80" right="@dimen/screen_width" bottom="@dimen/grip_bar_split_task_top_p0" />  </Variant>
-    <Variant id="@+id/drag_frame_50" parent="@id/base">
-        <Bounds left="0" top="80" right="@dimen/screen_width" bottom="@dimen/grip_bar_split_task_top_p1" />  </Variant>
-    <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="0" top="80" right="@dimen/screen_width" bottom="@dimen/grip_bar_split_task_top_p2" /> </Variant>
+        <Bounds left="16" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/grip_bar_split_task_top_p0" />  </Variant>
+     <Variant id="@+id/drag_frame_100" parent="@id/base">
+        <Bounds left="16" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/grip_bar_split_task_top_p2" /> </Variant>
 
-    <Transitions defaultInterpolator="@android:anim/bounce_interpolator" defaultDuration="700">
+    <KeyFrameVariant id="@+id/drag" parent="@id/base">
+        <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="100" variant="@id/drag_frame_100" />
+    </KeyFrameVariant>
+
+    <Transitions>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/opened"/>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=paintbooth_panel" toVariant="@id/opened_split"/>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened"/>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/opened_blur"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=paintbooth_panel;panelVariantId=bottom_opened" toVariant="@id/opened_paintbooth_split"/>
+
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened_overlap"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/opened_overlap"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=themeplayground_panel" toVariant="@id/opened_split"/>
+
         <Transition onEvent="_Drag_TaskSwitchEvent_top" toVariant="@id/opened_lower"/>
-        <Transition onEvent="_Drag_TaskSwitchEvent_bottom" toVariant="@id/opened_split"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/drag_frame_0" duration="1"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/drag_frame_50" duration="1"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/drag_frame_100" duration="1"/>
+        <Transition onEvent="_Drag_TaskSwitchEvent_bottom" toVariant="@id/opened_paintbooth_split"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="20"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=bottom_opened" toVariant="@id/opened_split" duration="20"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="20"/>
+
     </Transitions>
 </Panel>
