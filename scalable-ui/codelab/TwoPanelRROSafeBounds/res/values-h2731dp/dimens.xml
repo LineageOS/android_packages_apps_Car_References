@@ -15,26 +15,18 @@
   ~ limitations under the License.
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource,PxUsage">
-    <dimen name="screen_height">2048px</dimen>
+  <dimen name="screen_height">2560px</dimen>
+  <dimen name="screen_width">1600px</dimen>
 
-    <dimen name="top_bar_bottom">80px</dimen>
+  <dimen name="top_bar_bottom">86px</dimen>
 
-    <dimen name="bottom_bar_top">1836px</dimen>
-    <dimen name="bottom_bar_bottom">1920px</dimen>
+  <dimen name="bottom_bar_top">2410px</dimen>
+  <dimen name="bottom_bar_bottom">2560px</dimen>
 
-    <dimen name="app_grid_drawer_bottom">@dimen/contextual_bar_top</dimen>
-    <dimen name="app_grid_drawer_height">749px</dimen>
+  <dimen name="map_top">0px</dimen>
+  <dimen name="map_right">1600px</dimen>
 
-    <dimen name="map_top">0px</dimen>
-    <dimen name="map_height">1479px</dimen>
+  <dimen name="app_height">1200px</dimen>
 
-    <dimen name="contextual_bar_top">1428px</dimen>
-    <dimen name="contextual_bar_bottom">1836px</dimen>
-    <dimen name="contextual_bar_height">408px</dimen>
-
-    <dimen name="app_bottom">@dimen/contextual_bar_top</dimen>
-    <dimen name="app_height">749px</dimen>
-
-    <dimen name="app_height_safe">673px</dimen>
-    <dimen name="app_safe_top_offset">76px</dimen>
+  <dimen name="app_height_safe">1100px</dimen>
 </resources>

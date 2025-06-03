@@ -18,7 +18,7 @@
         <Layer layer="@integer/app_panel_layer"/>
         <Visibility isVisible="true"/>
         <Alpha alpha="1.0" />
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" top="@dimen/map_height" height="@dimen/app_height" />
     </Variant>
     <Variant id="@+id/closed">
         <Layer layer="@integer/app_panel_layer"/>
@@ -28,7 +28,6 @@
     </Variant>
 
     <Transitions>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=panel_app_grid" toVariant="@id/closed"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
     </Transitions>

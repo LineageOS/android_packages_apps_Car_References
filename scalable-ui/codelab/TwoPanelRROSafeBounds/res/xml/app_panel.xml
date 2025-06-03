@@ -18,23 +18,15 @@
         <Layer layer="@integer/app_panel_layer"/>
         <Visibility isVisible="true"/>
         <Alpha alpha="1.0" />
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
-        <SafeBounds
-            bottom="@dimen/bottom_bar_top"
-            left="0"
-            top="@dimen/safe_bounds_open_top"
-            width="100%" />
+        <Bounds left="0" bottom="100%" width="100%" height="@dimen/app_height" />
+        <SafeBounds left="0" bottom="100%" width="100%" height="@dimen/app_height_safe"/>
     </Variant>
     <Variant id="@+id/closed">
         <Layer layer="@integer/app_panel_layer"/>
         <Alpha alpha="0.0" />
         <Visibility isVisible="false"/>
         <Bounds left="0" top="@dimen/screen_height" width="100%" height="@dimen/app_height" />
-        <SafeBounds
-            bottom="@dimen/safe_bounds_close_bottom"
-            left="0"
-            top="@dimen/safe_bounds_close_top"
-            width="100%" />
+        <SafeBounds left="0" top="100%" width="100%" height="@dimen/app_height_safe" topOffset="@dimen/app_safe_top_offset"/>
     </Variant>
 
     <Transitions>
