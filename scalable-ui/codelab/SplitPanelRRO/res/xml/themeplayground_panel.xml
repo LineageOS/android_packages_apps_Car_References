@@ -45,16 +45,16 @@
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
 
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelToVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="5"/>
 
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="5"/>
 
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="100"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="100"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="100"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="100"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelToVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="100"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="100"/>
     </Transitions>
 </Panel>

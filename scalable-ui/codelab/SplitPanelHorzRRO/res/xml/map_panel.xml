@@ -42,8 +42,8 @@
     <Transitions>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/opened"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=map_panel" toVariant="@id/opened"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=app_panel;panelVariantId=left_opened" toVariant="@id/opened_split" duration="50"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=app_panel;panelVariantId=opened_full" toVariant="@id/drag_frame_100" duration="0"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=app_panel;panelToVariantId=left_opened" toVariant="@id/opened_split" duration="50"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=app_panel;panelToVariantId=opened_full" toVariant="@id/drag_frame_100" duration="0"/>
         <Transition onEvent="_User_DragEvent_split_increase" toVariant="@id/drag_from_center"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/opened"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/opened_split" />

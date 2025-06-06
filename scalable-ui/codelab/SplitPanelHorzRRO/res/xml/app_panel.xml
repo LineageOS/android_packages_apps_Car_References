@@ -63,7 +63,7 @@
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/left_opened"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_app_overlay;panelVariantId=opened_full" toVariant="@id/opened_full" duration="0"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_app_overlay;panelToVariantId=opened_full" toVariant="@id/opened_full" duration="0"/>
         <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/drag"/>
     </Transitions>
 </Panel>

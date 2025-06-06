@@ -72,9 +72,9 @@
         <Transition onEvent="_Drag_TaskSplitEvent_f50" onEventTokens="direction=decrease" toVariant="@id/drag_frame_50" />
         <Transition onEvent="_Drag_TaskSplitEvent_f100" onEventTokens="direction=decrease" toVariant="@id/drag_frame_100" />
 
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=drag_frame_0" toVariant="@id/closed" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=bottom_opened" toVariant="@id/closed" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=drag_frame_100" toVariant="@id/closed" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelToVariantId=drag_frame_0" toVariant="@id/closed" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelToVariantId=bottom_opened" toVariant="@id/closed" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelToVariantId=drag_frame_100" toVariant="@id/closed" duration="5"/>
 
         <Transition onEvent="_Drag_TaskSplitEvent_f0" onEventTokens="direction=noChange"  toVariant="@id/closed"  />
         <Transition onEvent="_Drag_TaskSplitEvent_f50" onEventTokens="direction=noChange" toVariant="@id/closed"  />

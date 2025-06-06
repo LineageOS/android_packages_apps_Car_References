@@ -53,7 +53,7 @@
         <Transition onEvent="_Drag_TaskSplitEvent_f50" onEventTokens="direction=increase" toVariant="@id/closed"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f100" onEventTokens="direction=increase" toVariant="@id/opened_full"/>
 
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=drag_frame_100" toVariant="@id/closed" duration="0"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_100" toVariant="@id/closed" duration="0"/>
 
         <Transition onEvent="_Drag_TaskSplitEvent_f0" onEventTokens="direction=noChange" toVariant="@id/closed" duration="0"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f50" onEventTokens="direction=noChange" toVariant="@id/closed" />

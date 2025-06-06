@@ -56,7 +56,7 @@
 
     <Transitions>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/opened"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=paintbooth_panel;panelVariantId=bottom_opened" toVariant="@id/opened_paintbooth_split"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=paintbooth_panel;panelToVariantId=bottom_opened" toVariant="@id/opened_paintbooth_split"/>
 
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened_overlap"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/opened_overlap"/>
@@ -64,9 +64,9 @@
 
         <Transition onEvent="_Drag_TaskSwitchEvent_top" toVariant="@id/opened_lower"/>
         <Transition onEvent="_Drag_TaskSwitchEvent_bottom" toVariant="@id/opened_paintbooth_split"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="20"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=bottom_opened" toVariant="@id/opened_split" duration="20"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="20"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="20"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelToVariantId=bottom_opened" toVariant="@id/opened_split" duration="20"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=themeplayground_panel;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="20"/>
 
     </Transitions>
 </Panel>

@@ -69,9 +69,9 @@
         <Transition onEvent="_Drag_TaskSplitEvent_f50" onEventTokens="direction=increase" toVariant="@id/drag_frame_50" />
         <Transition onEvent="_Drag_TaskSplitEvent_f100" onEventTokens="direction=increase" toVariant="@id/drag_frame_100" />
 
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=drag_frame_0" toVariant="@id/closed" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=opened_split" toVariant="@id/closed" duration="5"/>
-        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelVariantId=drag_frame_100" toVariant="@id/closed" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_0" toVariant="@id/closed" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=opened_split" toVariant="@id/closed" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_100" toVariant="@id/closed" duration="5"/>
 
         <Transition onEvent="_Drag_TaskSplitEvent_f0" onEventTokens="direction=noChange" fromVariant="@id/closed" toVariant="@id/closed" />
         <Transition onEvent="_Drag_TaskSplitEvent_f50" onEventTokens="direction=noChange" toVariant="@id/closed" />
