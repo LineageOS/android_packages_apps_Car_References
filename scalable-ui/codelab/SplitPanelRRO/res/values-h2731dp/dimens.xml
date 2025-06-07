@@ -30,8 +30,13 @@
   <dimen name="bottom_breakpoint_switch">1725px</dimen>
 
   <dimen name="app_height">1100px</dimen>
+  <dimen name="safe_app_height">1000px</dimen>
   <dimen name="app_right">1584px</dimen>
   <dimen name="split_bottom">1220px</dimen>
+
+  <dimen name="safe_bounds_open_top">1150px</dimen>
+  <dimen name="safe_bounds_close_top">2156px</dimen>
+  <dimen name="safe_bounds_close_bottom">2837px</dimen>
 
   <dimen name="grip_bar_split_task_left_p0">700px</dimen>
   <dimen name="grip_bar_split_task_top_p0">400px</dimen>

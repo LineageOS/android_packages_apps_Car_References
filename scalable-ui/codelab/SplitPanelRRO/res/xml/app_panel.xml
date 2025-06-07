@@ -24,8 +24,8 @@
         <Bounds left="16" bottom="@dimen/bottom_bar_top" right="1584" height="@dimen/app_height" />
         <SafeBounds
             bottom="@dimen/bottom_bar_top"
+            height="@dimen/safe_app_height"
             left="0"
-            top="@dimen/safe_bounds_open_top"
             width="100%" />
     </Variant>
     <Variant id="@+id/closed">
@@ -34,10 +34,10 @@
         <Visibility isVisible="false"/>
         <Bounds left="0" top="@dimen/screen_height" width="100%" height="@dimen/app_height" />
         <SafeBounds
-        bottom="@dimen/safe_bounds_close_bottom"
-        left="0"
-        top="@dimen/safe_bounds_close_top"
-        width="100%" />
+            bottom="@dimen/safe_bounds_close_bottom"
+            height="@dimen/safe_app_height"
+            left="0"
+            width="100%" />
     </Variant>
     <Transitions>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened"/>
