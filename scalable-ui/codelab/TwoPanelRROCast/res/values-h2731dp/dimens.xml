@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2025 The Android Open Source Project
   ~
@@ -13,8 +14,16 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<Controller id="decor_split_app_overlay_controller">
-    <Config key="ControllerName" value="com.android.systemui.car.wm.scalableui.view.PanelOverlayController"/>
-    <Config key="View" value="com.android.systemui.car.wm.scalableui.view.PanelOverlay"/>
-    <Config key="overlayPanelId" value="app_panel" />
-</Controller>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource,PxUsage">
+  <dimen name="screen_height">2560px</dimen>
+  <dimen name="screen_width">1600px</dimen>
+
+  <dimen name="top_bar_bottom">86px</dimen>
+
+  <dimen name="bottom_bar_top">2410px</dimen>
+  <dimen name="bottom_bar_bottom">2560px</dimen>
+
+  <dimen name="map_height">1300px</dimen>
+
+  <dimen name="app_height">1110px</dimen>
+</resources>

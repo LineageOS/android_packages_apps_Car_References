@@ -42,4 +42,5 @@
     <string name="decor_split_grip_bar_provider">decor_split_grip_bar_provider</string>
     <string name="decor_split_nav_overlay_panel_provider">decor_split_nav_overlay_panel_provider</string>
     <string name="decor_split_theme_overlay_panel_provider">decor_split_theme_overlay_panel_provider</string>
+    <string name="decor_frost_overlay_provider">decor_frost_overlay_provider</string>
 </resources>

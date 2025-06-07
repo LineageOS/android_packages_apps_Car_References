@@ -34,15 +34,14 @@
     <Variant id="@+id/drag_frame_0" parent="@id/base">
         <Bounds left="@dimen/grip_bar_split_task_left_p0" right="@dimen/grip_bar_split_task_right_p0" top="@dimen/grip_bar_split_task_top_p0" bottom="@dimen/grip_bar_split_task_bottom_p0" />
     </Variant>
-    <Variant id="@+id/drag_frame_50" parent="@id/base">
-        <Bounds left="@dimen/grip_bar_split_task_left_p1" right="@dimen/grip_bar_split_task_right_p1" top="@dimen/grip_bar_split_task_top_p1" bottom="@dimen/grip_bar_split_task_bottom_p1" />
-    </Variant>
+
     <Variant id="@+id/drag_frame_100" parent="@id/base">
         <Bounds left="@dimen/grip_bar_split_task_left_p2" right="@dimen/grip_bar_split_task_right_p2" top="@dimen/grip_bar_split_task_top_p2" bottom="@dimen/grip_bar_split_task_bottom_p2" />
     </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
         <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="50" variant="@id/opened" />
         <KeyFrame frame="100" variant="@id/drag_frame_100" />
     </KeyFrameVariant>
 
@@ -55,10 +54,11 @@
         <Transition onEvent="_System_EnterSuwEvent" toVariant="@id/closed"/>
         <Transition onEvent="_System_ExitSuwEvent" toVariant="@id/closed"/>
         <Transition onEvent="close_app_grid" toVariant="@id/closed"/>
-        <Transition onEvent="_User_DragEvent_split"  toVariant="@id/drag"/>
+        <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/drag"/>
+        <Transition onEvent="_User_DragEvent_split_increase" toVariant="@id/drag"/>
 
         <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/drag_frame_0"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/drag_frame_50"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/opened"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/drag_frame_100"/>
     </Transitions>
 </Panel>

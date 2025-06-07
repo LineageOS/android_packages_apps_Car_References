@@ -21,31 +21,21 @@
     </Variant>
     <Variant id="@+id/bottom_opened" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" top="@dimen/grip_bar_split_task_bottom_p1" right="@dimen/screen_width" bottom="@dimen/bottom_bar_top" />
+        <Bounds left="16" top="@dimen/grip_bar_split_task_bottom_p1" right="@dimen/app_right" bottom="@dimen/bottom_bar_top" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
         <Bounds left="0" top="@dimen/bottom_bar_bottom" width="100%" height="@dimen/app_grid_drawer_height" />
     </Variant>
-    <Variant id="@+id/drag_top_opened" parent="@id/base">
-        <Visibility isVisible="true"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" width="100%" height="@dimen/app_height" />
-    </Variant>
-    <Variant id="@+id/top_opened" parent="@id/base">
-        <Visibility isVisible="true"/>
-        <Bounds left="0" top="@dimen/map_top" right="@dimen/map_right" bottom="@dimen/split_bottom" />
-    </Variant>
 
     <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds left="0" top="@dimen/grip_bar_split_task_bottom_p0" right="@dimen/screen_width" bottom="@dimen/bottom_bar_top" />  </Variant>
-    <Variant id="@+id/drag_frame_50" parent="@id/base">
-        <Bounds left="0" top="@dimen/grip_bar_split_task_bottom_p1" right="@dimen/screen_width" bottom="@dimen/bottom_bar_top" />  </Variant>
+        <Bounds left="16" top="@dimen/grip_bar_split_task_bottom_p0" right="@dimen/app_right" bottom="@dimen/bottom_bar_top" />  </Variant>
     <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="0" top="@dimen/grip_bar_split_task_bottom_p2" right="@dimen/screen_width" bottom="@dimen/bottom_bar_top" /> </Variant>
+        <Bounds left="16" top="@dimen/grip_bar_split_task_bottom_p2" right="@dimen/app_right" bottom="@dimen/bottom_bar_top" /> </Variant>
 
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
-        <KeyFrame frame="0" variant="@id/drag_top_opened" />
-        <KeyFrame frame="100" variant="@id/bottom_opened" />
+        <KeyFrame frame="0" variant="@id/drag_frame_0" />
+        <KeyFrame frame="100" variant="@id/drag_frame_100" />
     </KeyFrameVariant>
 
     <Transitions>
@@ -54,8 +44,17 @@
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=themeplayground_panel" toVariant="@id/bottom_opened"/>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=kitchen_sink_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/drag_frame_0"  duration="1"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/drag_frame_50" duration="1"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/drag_frame_100" duration="1"/>
+
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelToVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_theme_overlay;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="5"/>
+
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="5"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=map_panel;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="5"/>
+
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelToVariantId=drag_frame_0" toVariant="@id/drag_frame_0" duration="100"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelToVariantId=drag_frame_50" toVariant="@id/bottom_opened" duration="100"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_nav_overlay;panelToVariantId=drag_frame_100" toVariant="@id/drag_frame_100" duration="100"/>
     </Transitions>
 </Panel>

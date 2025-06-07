@@ -16,13 +16,16 @@
   -->
 
 <resources>
-    <integer name="map_panel_layer">2</integer>
-    <integer name="frost_overlay_layer">40</integer>
-    <integer name="app_panel_layer">50</integer>
-    <integer name="app_grid_panel_layer">100</integer>
-    <integer name="paintbooth_panel_layer">100</integer>
-    <integer name="themeplayground_panel_layer">100</integer>
-    <integer name="decor_vail_overlay_panel_layer">101</integer>
-    <integer name="grip_bar_paintbooth_panel_layer">102</integer>
-    <integer name="assistant_panel_layer">200</integer>
+    <bool name="config_enableScalableUI" translatable="false">true</bool>
+    <bool name="config_enableClearBackStack" translatable="false">false</bool>
+    <string name="system_bar_app_drawer_intent" translatable="false">intent:#Intent;action=com.android.car.carlauncher.ACTION_APP_GRID;package=com.android.car.portraitlauncher;launchFlags=0x24000000;end</string>
+
+    <array name="window_states">
+        <item>@xml/app_panel</item>
+        <item>@xml/map_panel</item>
+    </array>
+
+    <string-array name="config_default_activities" translatable="false">
+        <item>map_panel;com.android.car.portraitlauncher/.homeactivities.BackgroundPanelBaseActivity</item>
+    </string-array>
 </resources>

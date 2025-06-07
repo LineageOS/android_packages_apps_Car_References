@@ -20,21 +20,16 @@
     <dimen name="top_bar_bottom">80px</dimen>
 
     <dimen name="bottom_bar_top">1836px</dimen>
-    <dimen name="bottom_bar_bottom">1920px</dimen>
+    <dimen name="bottom_bar_bottom">1087px</dimen>
 
     <dimen name="app_grid_drawer_bottom">@dimen/contextual_bar_top</dimen>
     <dimen name="app_grid_drawer_height">749px</dimen>
 
     <dimen name="map_top">0px</dimen>
-    <dimen name="map_height">1479px</dimen>
+    <dimen name="map_height">1087px</dimen>
 
     <dimen name="contextual_bar_top">1428px</dimen>
-    <dimen name="contextual_bar_bottom">1836px</dimen>
-    <dimen name="contextual_bar_height">408px</dimen>
 
     <dimen name="app_bottom">@dimen/contextual_bar_top</dimen>
     <dimen name="app_height">749px</dimen>
-
-    <dimen name="app_height_safe">673px</dimen>
-    <dimen name="app_safe_top_offset">76px</dimen>
 </resources>

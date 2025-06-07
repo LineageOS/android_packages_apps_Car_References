@@ -16,19 +16,19 @@
 
 <Panel id="decor_grip_bar_split_task" defaultVariant="@id/closed" role="@string/decor_split_grip_bar_provider" controller="@xml/decor_grib_bar_split_controller">
     <Variant id="@+id/base">
-        <Layer layer="@integer/decor_vail_overlay_panel_layer"/>
+        <Layer layer="@integer/decor_grip_bar_panel_layer"/>
         <Visibility isVisible="true"/>
         <Corner radius="@dimen/drag_corner_radius"/>
     </Variant>
 
     <Variant id="@+id/opened_left" parent="@id/base">
-        <Bounds top="300" left="0" bottom="700" right="35" />
+        <Bounds top="@dimen/grip_bar_split_task_top" left="0" bottom="@dimen/grip_bar_split_task_bottom" right="40" />
     </Variant>
     <Variant id="@+id/opened_center" parent="@id/base">
-        <Bounds top="300" left="1015" bottom="700" right="1035" />
+        <Bounds top="@dimen/grip_bar_split_task_top" left="@dimen/grip_bar_split_task_left" bottom="@dimen/grip_bar_split_task_bottom" right="@dimen/grip_bar_split_task_right" />
     </Variant>
     <Variant id="@+id/opened_right" parent="@id/base">
-        <Bounds top="300" left="2028" bottom="700" right="2048" />
+        <Bounds top="@dimen/grip_bar_split_task_top" left="2520" bottom="@dimen/grip_bar_split_task_bottom" right="2560" />
     </Variant>
 
     <Variant id="@+id/closed" parent="@id/base">
@@ -36,22 +36,15 @@
         <Bounds left="@dimen/grip_bar_split_task_left" top="@dimen/bottom_bar_bottom" right="@dimen/grip_bar_split_task_right" height="100%" />
     </Variant>
 
-    <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds top="300" left="0" bottom="700" right="25" />
-    </Variant>
-
-    <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds top="300" left="1890" bottom="700" right="2048" />
-    </Variant>
-
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
-        <KeyFrame frame="0" variant="@id/drag_frame_0" />
-        <KeyFrame frame="100" variant="@id/drag_frame_100" />
+        <KeyFrame frame="0" variant="@id/opened_left" />
+        <KeyFrame frame="100" variant="@id/opened_right" />
     </KeyFrameVariant>
 
     <Transitions>
         <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/opened_center"/>
-        <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=map_panel" toVariant="@id/opened_left"/>
+        <Transition onEvent="_System_OnHomeEvent" toVariant="@id/opened_left"/>
         <Transition onEvent="_System_EnterSuwEvent" toVariant="@id/closed"/>
         <Transition onEvent="_System_ExitSuwEvent" toVariant="@id/closed"/>
         <Transition onEvent="close_app_grid" toVariant="@id/closed"/>

@@ -22,8 +22,8 @@
     <Config key="Orientation" value="1" />
     <Config key="SnapThreadhold" value="5"/>
     <BreakPoints>
-        <BreakPoint point="0" eventId="_Drag_TaskSplitEvent_f0" />
-        <BreakPoint point="1024" eventId="_Drag_TaskSplitEvent_f50" />
-        <BreakPoint point="2048" eventId="_Drag_TaskSplitEvent_f100" />
+        <BreakPoint point="40" eventId="_Drag_TaskSplitEvent_f0" />
+        <BreakPoint point="1280" eventId="_Drag_TaskSplitEvent_f50" />
+        <BreakPoint point="2520" eventId="_Drag_TaskSplitEvent_f100" />
     </BreakPoints>
 </Controller>

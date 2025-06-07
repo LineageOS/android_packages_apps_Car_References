@@ -21,7 +21,8 @@
     </Variant>
     <Variant id="@+id/left_opened" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="@dimen/app_right" />
+        <Corner radius="@dimen/corner_radius"/>
+        <Bounds left="16" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="@dimen/app_right" />
         <SafeBounds
             bottom="@dimen/bottom_bar_top"
             left="70"
@@ -30,7 +31,8 @@
     </Variant>
     <Variant id="@+id/opened_full" parent="@id/base">
         <Visibility isVisible="true"/>
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="100%" />
+        <Corner radius="@dimen/corner_radius"/>
+        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="2520" />
         <SafeBounds
             bottom="@dimen/bottom_bar_top"
             left="70"
@@ -39,7 +41,7 @@
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
-        <Bounds right="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="@dimen/app_right" height="@dimen/app_grid_drawer_width" />
+        <Bounds bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="0" left="-1260"/>
         <SafeBounds
             bottom="@dimen/bottom_bar_top"
             width="945"
@@ -47,30 +49,21 @@
             right="0" />
     </Variant>
 
-    <Variant id="@+id/drag_frame_0" parent="@id/base">
-        <Bounds bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="0" left="-1015"/>
-    </Variant>
-
-    <Variant id="@+id/drag_frame_50" parent="@id/base">
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" width="50%"/>
-    </Variant>
-
-    <Variant id="@+id/drag_frame_100" parent="@id/base">
-        <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="2048" />
-    </Variant>
-
     <KeyFrameVariant id="@+id/drag" parent="@id/base">
-        <KeyFrame frame="0" variant="@id/drag_frame_0" />
-        <KeyFrame frame="50" variant="@id/drag_frame_50" />
-        <KeyFrame frame="100" variant="@id/drag_frame_100" />
+        <KeyFrame frame="0" variant="@id/closed" />
+        <KeyFrame frame="50" variant="@id/left_opened" />
+        <KeyFrame frame="100" variant="@id/opened_full" />
     </KeyFrameVariant>
 
     <Transitions>
-        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" toVariant="@id/left_opened"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" fromVariant="@id/closed" toVariant="@id/left_opened"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" fromVariant="@id/left_opened" toVariant="@id/left_opened"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=app_panel" fromVariant="@id/opened_full" toVariant="@id/opened_full"/>
+        <Transition onEvent="_System_TaskOpenEvent" onEventTokens="panelId=map_panel" toVariant="@id/closed"/>
         <Transition onEvent="_System_OnHomeEvent" toVariant="@id/closed"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed" duration="1"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/left_opened" duration="1"/>
-        <Transition onEvent="_Drag_TaskSplitEvent_f100" toVariant="@id/opened_full" duration="1"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/closed"/>
+        <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/left_opened"/>
+        <Transition onEvent="_System_OnAnimationEndEvent" onEventTokens="panelId=decor_split_app_overlay;panelToVariantId=opened_full" toVariant="@id/opened_full" duration="0"/>
         <Transition onEvent="_User_DragEvent_split_decrease" toVariant="@id/drag"/>
     </Transitions>
 </Panel>

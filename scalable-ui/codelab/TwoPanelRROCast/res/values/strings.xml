@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2025 The Android Open Source Project
   ~
@@ -13,8 +14,10 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<Controller id="decor_split_app_overlay_controller">
-    <Config key="ControllerName" value="com.android.systemui.car.wm.scalableui.view.PanelOverlayController"/>
-    <Config key="View" value="com.android.systemui.car.wm.scalableui.view.PanelOverlay"/>
-    <Config key="overlayPanelId" value="app_panel" />
-</Controller>
+<resources>
+    <string name="default_config">DEFAULT</string>
+
+    <string-array name="nav_components" translatable="false">
+        <item>com.google.android.apps.maps/com.google.android.maps.MapsActivity</item>
+    </string-array>
+</resources>

@@ -47,8 +47,8 @@
     <dimen name="grip_bar_split_task_right_p2">700px</dimen>
     <dimen name="grip_bar_split_task_bottom_p2">1515px</dimen>
 
-    <dimen name="corner_radius">40dp</dimen>
-    <dimen name="drag_corner_radius">80dp</dimen>
+    <dimen name="corner_radius">36dp</dimen>
+    <dimen name="drag_corner_radius">36dp</dimen>
 
     <dimen name="app_immersive_top">@dimen/top_bar_bottom</dimen>
     <dimen name="app_immersive_height">1712px</dimen>
