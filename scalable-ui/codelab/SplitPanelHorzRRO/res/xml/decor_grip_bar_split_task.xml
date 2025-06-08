@@ -48,7 +48,8 @@
         <Transition onEvent="_System_EnterSuwEvent" toVariant="@id/closed"/>
         <Transition onEvent="_System_ExitSuwEvent" toVariant="@id/closed"/>
         <Transition onEvent="close_app_grid" toVariant="@id/closed"/>
-        <Transition onEvent="_User_DragEvent_split"  toVariant="@id/drag"/>
+        <Transition onEvent="_User_DragEvent_split_increase"  toVariant="@id/drag"/>
+        <Transition onEvent="_User_DragEvent_split_decrease"  toVariant="@id/drag"/>
 
         <Transition onEvent="_Drag_TaskSplitEvent_f0" toVariant="@id/opened_left"/>
         <Transition onEvent="_Drag_TaskSplitEvent_f50" toVariant="@id/opened_center"/>
