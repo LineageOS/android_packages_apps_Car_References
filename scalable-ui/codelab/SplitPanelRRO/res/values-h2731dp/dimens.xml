@@ -26,8 +26,8 @@
   <dimen name="map_top">@dimen/top_bar_bottom</dimen>
   <dimen name="map_right">1584px</dimen>
 
-  <dimen name="top_breakpoint_switch">400px</dimen>
-  <dimen name="bottom_breakpoint_switch">1725px</dimen>
+  <dimen name="top_breakpoint_switch">420px</dimen>
+  <dimen name="bottom_breakpoint_switch">1720px</dimen>
 
   <dimen name="app_height">1100px</dimen>
   <dimen name="app_right">1584px</dimen>
