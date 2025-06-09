@@ -20,6 +20,7 @@
     <dimen name="screen_height">1600px</dimen>
 
     <dimen name="top_bar_bottom">71px</dimen>
+    <dimen name="caption_bar_left">160px</dimen>
 
     <dimen name="bottom_bar_top">1450px</dimen>
     <dimen name="bottom_bar_bottom">2560px</dimen>

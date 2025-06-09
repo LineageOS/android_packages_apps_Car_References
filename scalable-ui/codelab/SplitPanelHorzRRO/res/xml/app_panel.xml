@@ -25,7 +25,7 @@
         <Bounds left="16" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="@dimen/app_right" />
         <SafeBounds
             bottom="@dimen/bottom_bar_top"
-            left="70"
+            left="@dimen/caption_bar_left"
             top="@dimen/top_bar_bottom"
             right="@dimen/app_right" />
     </Variant>
@@ -35,9 +35,9 @@
         <Bounds left="0" bottom="@dimen/bottom_bar_top" top="@dimen/top_bar_bottom" right="2520" />
         <SafeBounds
             bottom="@dimen/bottom_bar_top"
-            left="70"
+            left="@dimen/caption_bar_left"
             top="@dimen/top_bar_bottom"
-            right="@dimen/app_right" />
+            right="2520" />
     </Variant>
     <Variant id="@+id/closed" parent="@id/base">
         <Visibility isVisible="false"/>
