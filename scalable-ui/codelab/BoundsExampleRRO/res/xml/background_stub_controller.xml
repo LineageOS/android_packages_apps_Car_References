@@ -13,14 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanelCast.codelab">
-    <application android:hasCode="false" />
-    <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
-    <overlay
-        android:targetPackage="com.android.systemui"
-        android:isStatic="false"
-        android:category="com.android.systemui.car.dewd"
-        android:priority="111" />
-</manifest>
+<Controller id="background_stub_controller">
+    <Config key="ControllerName" value="com.android.systemui.car.wm.scalableui.panel.controller.BaseTaskPanelController"/>
+    <Config key="PersistentActivity" value="com.android.systemui/.TestActivity" />
+</Controller>
