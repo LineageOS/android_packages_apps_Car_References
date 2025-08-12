@@ -13,14 +13,15 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+<Panel id="background_panel" defaultVariant="@id/fullscreen" role="@string/background_panel_array" displayId="0" controller="@xml/background_stub_controller">
+    <Variant id="@+id/fullscreen">
+        <Layer layer="@integer/backgrond_panel_layer"/>
+        <Visibility isVisible="true"/>
+        <Alpha alpha="1.0" />
+        <Bounds left="0" top="0" width="100%" height="100%" />
+    </Variant>
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanelCast.codelab">
-    <application android:hasCode="false" />
-    <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
-    <overlay
-        android:targetPackage="com.android.systemui"
-        android:isStatic="false"
-        android:category="com.android.systemui.car.dewd"
-        android:priority="111" />
-</manifest>
+    <Transitions>
+        <Transition onEvent="_System_OnHomeEvent" toVariant="@id/fullscreen"/>
+    </Transitions>
+</Panel>

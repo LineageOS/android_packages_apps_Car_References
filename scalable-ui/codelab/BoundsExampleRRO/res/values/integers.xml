@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2025 The Android Open Source Project
   ~
@@ -14,13 +15,7 @@
   ~ limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanelCast.codelab">
-    <application android:hasCode="false" />
-    <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
-    <overlay
-        android:targetPackage="com.android.systemui"
-        android:isStatic="false"
-        android:category="com.android.systemui.car.dewd"
-        android:priority="111" />
-</manifest>
+<resources>
+    <integer name="backgrond_panel_layer">20</integer>
+    <integer name="app_panel_layer">50</integer>
+</resources>

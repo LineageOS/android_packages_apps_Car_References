@@ -21,5 +21,6 @@
     <overlay
         android:targetPackage="com.android.systemui"
         android:isStatic="false"
+        android:category="com.android.systemui.car.dewd"
         android:priority="111" />
 </manifest>

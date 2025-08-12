@@ -20,7 +20,7 @@ package {
 
 // CarSystemUI scalableUI configs
 runtime_resource_overlay {
-    name: "TwoPanelRROCast",
+    name: "BoundsExampleRRO",
     resource_dirs: ["res"],
     manifest: "AndroidManifest.xml",
 }

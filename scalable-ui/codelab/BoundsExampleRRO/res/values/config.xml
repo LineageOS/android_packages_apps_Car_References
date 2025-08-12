@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2025 The Android Open Source Project
   ~
@@ -14,13 +15,13 @@
   ~ limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.rro.scalableUI.twoPanelCast.codelab">
-    <application android:hasCode="false" />
-    <!-- priority need to be higher than CarSystemUIDewdUIRRO -->
-    <overlay
-        android:targetPackage="com.android.systemui"
-        android:isStatic="false"
-        android:category="com.android.systemui.car.dewd"
-        android:priority="111" />
-</manifest>
+<resources>
+    <bool name="config_enableScalableUI" translatable="false">true</bool>
+    <bool name="config_enableClearBackStack" translatable="false">false</bool>
+    <string name="system_bar_app_drawer_intent" translatable="false">intent:#Intent;action=com.android.car.carlauncher.ACTION_APP_GRID;package=com.android.car.portraitlauncher;launchFlags=0x24000000;end</string>
+
+    <array name="window_states">
+        <item>@xml/app_panel</item>
+        <item>@xml/background_panel</item>
+    </array>
+</resources>
