@@ -19,7 +19,6 @@ PRODUCT_PACKAGES += \
     TwoPanelRRO \
     OnePanelRRO \
     SplitPanelRRO \
-    DDPanelRRO \
     ScalableUiTestApp \
     SplitPanelLandRRO \
     SplitPanelHorzRRO \
